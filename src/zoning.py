@@ -12,7 +12,7 @@ import pandas as pd
 
 Data = pd.read_csv('Prices_With_Coords.csv')
 # Sort Data from most Price % Increase to lowest
-df_sorted = Data.sort_values(by='Price Percentage Increase')
+df_sorted = Data.sort_values(by='Price Percentage Increase').reset_index(drop=True)
 
 # Assign ranks
 n = len(Data)
